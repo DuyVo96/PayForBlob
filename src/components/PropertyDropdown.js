@@ -1,14 +1,12 @@
 import { Menu } from "@headlessui/react";
 import React, {
   useContext,
-  useEffect,
   useState,
 } from "react";
 import {
-  RiHome5Line,
-  RiMapPinLine,
   RiArrowDownSLine,
   RiArrowUpSLine,
+  RiHome5Line,
 } from "react-icons/ri";
 import { HouseContext } from "./HouseContext";
 
