@@ -7,6 +7,7 @@ module.exports = (app) => {
     createProxyMiddleware("/submit_pfb", {
       // target: "http://149.102.158.186:26659",
       target: "https://dv-cosmos.xyz/",
+      // target: "http://dv-cosmos.xyz/",
 
       changeOrigin: true,
     })
@@ -17,6 +18,7 @@ module.exports = (app) => {
       {
         // target: "http://149.102.158.186:26659",
         target: "https://dv-cosmos.xyz/",
+        // target: "http://dv-cosmos.xyz/",
 
         changeOrigin: true,
       }
