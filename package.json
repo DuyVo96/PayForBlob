@@ -1,7 +1,7 @@
 {
   "name": "real-estate-main",
   "version": "0.1.0",
-  "proxy": "http://149.102.158.186:26659",
+  "proxy": "http://149.102.158.186",
   "homepage": "https://payforblob.vercel.app/",
   "private": true,
   "dependencies": {
