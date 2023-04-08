@@ -25,7 +25,7 @@ function Retrieve(props) {
     };
 
     fetch(
-      `http://dv-cosmos.xyz/namespaced_shares/${nameSpaceID2}/height/${height}`,
+      `https://dv-cosmos.xyz/namespaced_shares/${nameSpaceID2}/height/${height}`,
       requestOptions
     )
       .then((response) => response.text())
