@@ -47,7 +47,9 @@ function SendPFB(props) {
       requestOptions
     )
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      .then((result) =>
+        setResponse(JSON.parse(result))
+      )
       .catch((error) =>
         console.log("error", error)
       );

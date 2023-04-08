@@ -10,14 +10,31 @@ function Retrieve(props) {
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        `/namespaced_shares/${nameSpaceID2}/height/${height}`
+    // try {
+    //   const response = await axios.get(
+    //     `/namespaced_shares/${nameSpaceID2}/height/${height}`
+    //   );
+    //   setResponseData(response.data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(
+      `http://dv-cosmos.xyz/namespaced_shares/${nameSpaceID2}/height/${height}`,
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) =>
+        setResponseData(JSON.parse(result))
+      )
+      .catch((error) =>
+        console.log("error", error)
       );
-      setResponseData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   return (
