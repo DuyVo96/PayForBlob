@@ -1,27 +1,27 @@
-const {
-  createProxyMiddleware,
-} = require("http-proxy-middleware");
+// const {
+//   createProxyMiddleware,
+// } = require("http-proxy-middleware");
 
-module.exports = (app) => {
-  app.use(
-    createProxyMiddleware("/submit_pfb", {
-      // target: "http://149.102.158.186:26659",
-      target: "https://dv-cosmos.xyz/",
-      // target: "http://dv-cosmos.xyz/",
+// module.exports = (app) => {
+//   app.use(
+//     createProxyMiddleware("/submit_pfb", {
+//       target: "http://149.102.158.186:26659",
+//       target: "https://dv-cosmos.xyz/",
+//       target: "http://dv-cosmos.xyz/",
 
-      changeOrigin: true,
-    })
-  );
-  app.use(
-    createProxyMiddleware(
-      "/namespaced_shares/:namespacedShares/height/:height",
-      {
-        // target: "http://149.102.158.186:26659",
-        target: "https://dv-cosmos.xyz/",
-        // target: "http://dv-cosmos.xyz/",
+//       changeOrigin: true,
+//     })
+//   );
+//   app.use(
+//     createProxyMiddleware(
+//       "/namespaced_shares/:namespacedShares/height/:height",
+//       {
+//         target: "http://149.102.158.186:26659",
+//         // target: "https://dv-cosmos.xyz/",
+//         // target: "http://dv-cosmos.xyz/",
 
-        changeOrigin: true,
-      }
-    )
-  );
-};
+//         changeOrigin: true,
+//       }
+//     )
+//   );
+// };
