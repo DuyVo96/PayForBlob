@@ -15,44 +15,49 @@ function SendPFB(props) {
   };
 
   const handleButtonClick = () => {
-    // axios
-    //   .post("/submit_pfb", sendData)
-    //   .then((response) => {
-    //     setResponse(response.data);
-    //     setError(null);
-    //   })
-    //   .catch((error) => {
-    //     setError(error);
-    //     setResponse(null);
-    //   });
-
-    var myHeaders = new Headers();
-    myHeaders.append(
-      "Content-Type",
-      "text/plain"
-    );
-
-    // var raw =
-    // '{\n    "namespace_id": "0c204d39600fddd3",\n    "data": "f1f20ca8007e910a3bf8b2e61da0f26bca07ef78717a6ea54165f5",\n    "gas_limit":80000,\n    "fee": 2000\n}';
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: JSON.stringify(sendData),
-      redirect: "follow",
+    var config = {
+      method: "post",
+      url: "https://dv-cosmos.xyz/submit_pfb",
+      headers: {
+        "Content-Type": "text/plain",
+      },
+      data: sendData,
     };
 
-    fetch(
-      "https://dv-cosmos.xyz/submit_pfb",
-      requestOptions
-    )
-      .then((response) => response.text())
-      .then((result) =>
-        setResponse(JSON.parse(result))
-      )
-      .catch((error) =>
-        console.log("error", error)
-      );
+    axios(config)
+      .then((response) => {
+        setResponse(response.data);
+        setError(null);
+      })
+      .catch((error) => {
+        setError(error);
+        setResponse(null);
+      });
+
+    // var myHeaders = new Headers();
+    // myHeaders.append(
+    //   "Content-Type",
+    //   "text/plain"
+    // );
+
+    // var requestOptions = {
+    //   method: "POST",
+    //   headers: myHeaders,
+    //   body: JSON.stringify(sendData),
+    //   redirect: "follow",
+    // };
+
+    // fetch(
+    //   "https://dv-cosmos.xyz/submit_pfb",
+    //   requestOptions
+    // )
+    //   .then((response) => response.text())
+    //   .then((result) =>
+    //     setResponse(JSON.parse(result))
+    //   )
+    //   .catch((error) =>
+    //     console.log("error", error)
+    //   );
   };
 
   return (
