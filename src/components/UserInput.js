@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SendPFB from "./SendPFB";
 import Retrieve from "./Retrieve";
 
-function GenerateNamespace() {
+function UserInput() {
   // sendtx
   const [nameSpaceID, setNameSpaceID] =
     useState("");
@@ -39,7 +39,7 @@ function GenerateNamespace() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <h1 className="text-[35px] items-center font-semibold">
+        <h1 className="text-[30px] items-center font-semibold">
           1. Submit PayForBlob Transactions
         </h1>
       </div>
@@ -50,18 +50,32 @@ function GenerateNamespace() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <h1 className="text-[23px] items-center ">
-          Go to this link to get your "namespace
-          ID" and "hex-encoded message" to fill
-          this blank.
-          <p className="text-violet-700 font-semibold">
-            <a
-              href="https://go.dev/play/p/7ltvaj8lhRl"
-              target="_blank"
-              rel="noreferrer"
-            >
-              https://go.dev/play/p/7ltvaj8lhRl
-            </a>
+        <h1
+          className="text-[20px] items-center"
+          style={{ wordWrap: "break-word" }}
+        >
+          <p className="text-[20px] self-center">
+            Go to this{" "}
+            <span className="text-[25px] text-violet-700 font-semibold">
+              <a
+                href="https://go.dev/play/p/7ltvaj8lhRl"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LINK
+              </a>
+            </span>{" "}
+            below to get your "namespace ID" and
+            "hex-encoded message" to fill this
+            blank OR use this example :
+            <span className=" text-violet-700 font-semibold">
+              "namespace ID"
+            </span>
+            ="590c14409888b5b0",
+            <span className=" text-violet-700 font-semibold">
+              "hex-encoded message"
+            </span>
+            :"7d51a817ee0755e3c7a76490c3"
           </p>
         </h1>
       </div>
@@ -72,7 +86,7 @@ function GenerateNamespace() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <p className="text-[26px] self-center">
+        <p className="text-[20px] self-center">
           Enter your namespace ID:
         </p>
         <input
@@ -80,6 +94,7 @@ function GenerateNamespace() {
           value={nameSpaceID}
           onChange={handleNameSpaceIDChange}
           className="border text-[26px] border-violet-700 self-center text-center"
+          style={{ width: "450px" }}
         />
       </div>
 
@@ -89,7 +104,7 @@ function GenerateNamespace() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <p className="text-[26px] self-center">
+        <p className="text-[20px] self-center">
           Enter your hex-encoded message:
         </p>
 
@@ -98,6 +113,7 @@ function GenerateNamespace() {
           value={data}
           onChange={handleDataChange}
           className="border text-[26px] border-violet-700 self-center text-center"
+          style={{ width: "450px" }}
         />
       </div>
       <SendPFB
@@ -111,7 +127,7 @@ function GenerateNamespace() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <h1 className="text-[35px] items-center font-semibold">
+        <h1 className="text-[30px] items-center font-semibold">
           2. Retrieve the data by block height and
           namespace
         </h1>
@@ -123,7 +139,7 @@ function GenerateNamespace() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <p className="text-[26px] self-center">
+        <p className="text-[20px] self-center">
           Enter your namespace ID:
         </p>
         <input
@@ -131,6 +147,7 @@ function GenerateNamespace() {
           value={nameSpaceID2}
           onChange={handleNameSpaceID2Change}
           className="border text-[26px] border-violet-700 self-center text-center"
+          style={{ width: "450px" }}
         />
       </div>
 
@@ -140,7 +157,7 @@ function GenerateNamespace() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <p className="text-[26px] self-center">
+        <p className="text-[20px] self-center">
           Enter your height:
         </p>
 
@@ -149,6 +166,7 @@ function GenerateNamespace() {
           value={height}
           onChange={handleHeightChange}
           className="border text-[26px] border-violet-700 self-center text-center"
+          style={{ width: "450px" }}
         />
       </div>
 
@@ -160,4 +178,4 @@ function GenerateNamespace() {
   );
 }
 
-export default GenerateNamespace;
+export default UserInput;

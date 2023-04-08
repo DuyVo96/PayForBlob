@@ -4,7 +4,6 @@ import React, { useState } from "react";
 function Retrieve(props) {
   const { nameSpaceID2, height } = props;
 
-  //   const [response, setResponse] = useState();
   const [responseData, setResponseData] =
     useState(null);
   const [error, setError] = useState(null);
@@ -18,25 +17,6 @@ function Retrieve(props) {
     } catch (error) {
       console.log(error);
     }
-
-    /// fetch
-
-    // var requestOptions = {
-    //   method: "GET",
-    //   redirect: "follow",
-    // };
-
-    // fetch(
-    //   `https://dv-cosmos.xyz/namespaced_shares/${nameSpaceID2}/height/${height}`,
-    //   requestOptions
-    // )
-    //   .then((response) => response.text())
-    //   .then((result) =>
-    //     setResponseData(JSON.parse(result))
-    //   )
-    //   .catch((error) =>
-    //     console.log("error", error)
-    //   );
   };
 
   return (
@@ -67,7 +47,7 @@ function Retrieve(props) {
           <p className="text-[26px] self-center">
             Response:
           </p>
-          <p className="text-[16px]">
+          <p className="text-[15px]">
             {JSON.stringify(responseData)}
           </p>
         </div>

@@ -33,31 +33,6 @@ function SendPFB(props) {
         setError(error);
         setResponse(null);
       });
-
-    // var myHeaders = new Headers();
-    // myHeaders.append(
-    //   "Content-Type",
-    //   "text/plain"
-    // );
-
-    // var requestOptions = {
-    //   method: "POST",
-    //   headers: myHeaders,
-    //   body: JSON.stringify(sendData),
-    //   redirect: "follow",
-    // };
-
-    // fetch(
-    //   "https://dv-cosmos.xyz/submit_pfb",
-    //   requestOptions
-    // )
-    //   .then((response) => response.text())
-    //   .then((result) =>
-    //     setResponse(JSON.parse(result))
-    //   )
-    //   .catch((error) =>
-    //     console.log("error", error)
-    //   );
   };
 
   return (
@@ -88,14 +63,45 @@ function SendPFB(props) {
           <p className="text-[26px] self-center">
             Response:
           </p>
-          <p className=" text-[26px]">
-            YOURS HEIGHT IS:
+
+          <p className=" text-[20px]">
+            NAMESPACE ID:
+            <span className=" text-violet-700 font-semibold">
+              {" "}
+              {nameSpaceID}
+            </span>
+          </p>
+
+          <p className=" text-[20px]">
+            HEIGHT:
             <span className=" text-violet-700 font-semibold">
               {" "}
               {response.height}
             </span>
           </p>
-          <p className="text-[16px]">
+
+          <p className=" text-[20px]">
+            TXHASH:
+            <span className=" text-violet-700 font-semibold">
+              {" "}
+              {response.txhash}
+            </span>
+          </p>
+
+          <p className=" text-[20px]">
+            TX LINK:
+            <span className=" text-violet-700 font-semibold">
+              {" "}
+              <a
+                href={`https://testnet.mintscan.io/celestia-incentivized-testnet/txs/${response.txhash}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                LINK
+              </a>
+            </span>
+          </p>
+          <p className="text-[15px]">
             {JSON.stringify(response)}
           </p>
         </div>
