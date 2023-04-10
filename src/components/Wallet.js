@@ -44,7 +44,7 @@ function Wallet() {
       <button
         onClick={handleConnect}
         className={`bg-${
-          connected ? "violet" : "red"
+          connected ? "violet" : "violet"
         }-700 hover:bg-violet-800 trasition w-full
         lg:max-w-[162px] h-12 rounded-lg flex justify-center items-center text-white text-[12px]`}
       >
