@@ -1,19 +1,22 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { FaSpinner } from "react-icons/fa";
 
 function Retrieve(props) {
   const { nameSpaceID2, height } = props;
-
+  const [loading, setLoading] = useState(false);
   const [responseData, setResponseData] =
     useState(null);
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
+    setLoading(true);
     try {
       const response = await axios.get(
         `https://dv-cosmos.xyz/namespaced_shares/${nameSpaceID2}/height/${height}`
       );
       setResponseData(response.data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -36,6 +39,11 @@ function Retrieve(props) {
           Submit
         </button>
       </div>
+      {loading && (
+        <div className="flex justify-center mt-4 mb-6">
+          <FaSpinner className="animate-spin text-4xl text-violet-700" />
+        </div>
+      )}
       {responseData && (
         <div
           className="px-[30px] py-6 max-w-[2000px] mx-auto 

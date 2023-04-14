@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { FaSpinner } from "react-icons/fa";
 
 function SendPFB(props) {
   const { nameSpaceID, data } = props;
 
   const [response, setResponse] = useState();
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const sendData = {
     namespace_id: nameSpaceID,
@@ -15,6 +17,7 @@ function SendPFB(props) {
   };
 
   const handleButtonClick = () => {
+    setLoading(true);
     var config = {
       method: "post",
       url: "https://dv-cosmos.xyz/submit_pfb",
@@ -28,10 +31,12 @@ function SendPFB(props) {
       .then((response) => {
         setResponse(response.data);
         setError(null);
+        setLoading(false);
       })
       .catch((error) => {
         setError(error);
         setResponse(null);
+        setLoading(false);
       });
   };
 
@@ -52,9 +57,14 @@ function SendPFB(props) {
           Submit
         </button>
       </div>
+      {loading && (
+        <div className="flex justify-center mt-4 mb-6">
+          <FaSpinner className="animate-spin text-4xl text-violet-700" />
+        </div>
+      )}
       {response && (
         <div
-          className="px-[30px] py-6 max-w-[2000px] mx-auto 
+          className="px-[30px] py-6 max-w-[900px] mx-auto
         flex flex-col lg:flex-col justify-between gap-4 lg:gap-x-3 
         relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
         lg:backdrop-blur rounded-lg"
@@ -64,46 +74,49 @@ function SendPFB(props) {
             Response:
           </p>
 
-          <p className=" text-[20px]">
-            NAMESPACE ID:
-            <span className=" text-violet-700 font-semibold">
-              {" "}
-              {nameSpaceID}
-            </span>
-          </p>
+          <div className="self-center">
+            <p className=" text-[20px]">
+              NAMESPACE ID:
+              <span className=" text-violet-700 font-semibold">
+                {" "}
+                {nameSpaceID}
+              </span>
+            </p>
 
-          <p className=" text-[20px]">
-            HEIGHT:
-            <span className=" text-violet-700 font-semibold">
-              {" "}
-              {response.height}
-            </span>
-          </p>
+            <p className=" text-[20px]">
+              HEIGHT:
+              <span className=" text-violet-700 font-semibold">
+                {" "}
+                {response.height}
+              </span>
+            </p>
 
-          <p className=" text-[20px]">
-            TXHASH:
-            <span className=" text-violet-700 font-semibold">
-              {" "}
-              {response.txhash}
-            </span>
-          </p>
+            <p className=" text-[20px]">
+              TXHASH:
+              <span className=" text-violet-700 font-semibold">
+                {" "}
+                {response.txhash}
+              </span>
+            </p>
 
-          <p className=" text-[20px]">
-            TX LINK:
-            <span className=" text-violet-700 font-semibold">
-              {" "}
-              <a
-                href={`https://testnet.mintscan.io/celestia-incentivized-testnet/txs/${response.txhash}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                LINK
-              </a>
-            </span>
-          </p>
-          <p className="text-[15px]">
+            <p className=" text-[20px]">
+              TX LINK:
+              <span className=" text-violet-700 font-semibold">
+                {" "}
+                <a
+                  href={`https://testnet.mintscan.io/celestia-incentivized-testnet/txs/${response.txhash}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LINK
+                </a>
+              </span>
+            </p>
+          </div>
+
+          {/* <p className="text-[15px]">
             {JSON.stringify(response)}
-          </p>
+          </p> */}
         </div>
       )}
     </div>
