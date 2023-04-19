@@ -167,14 +167,16 @@ function UserInput() {
       relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
       lg:backdrop-blur rounded-lg"
       >
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center text-[12px]">
           <div>
             Made by duyvo102#3738 with
             &#10084;&#10084;&#10084;
           </div>
-          <div>
-            Node Identity:
-            12D3KooWMTMwWoXW1HLWNNnS2wzGMYJ21hXLCgjS7TRFy1sYBvgo
+          <div className="flex flex-col justify-center items-center">
+            <span> Node ID:</span>
+            <span>
+              12D3KooWMTMwWoXW1HLWNNnS2wzGMYJ21hXLCgjS7TRFy1sYBvgo
+            </span>
           </div>
         </div>
       </div>
