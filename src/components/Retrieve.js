@@ -24,12 +24,7 @@ function Retrieve(props) {
 
   return (
     <div>
-      <div
-        className="px-[30px] py-6 max-w-[200px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
-    relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-    lg:backdrop-blur rounded-lg"
-      >
+      <div className="flex justify-center max-w-[100px] mx-auto mb-10">
         <button
           onClick={fetchData}
           className="bg-violet-700 hover:bg-violet-800 trasition w-full
@@ -46,16 +41,16 @@ function Retrieve(props) {
       )}
       {responseData && (
         <div
-          className="px-[30px] py-6 max-w-[2000px] mx-auto 
-        flex flex-col lg:flex-col justify-between gap-4 lg:gap-x-3 
-        relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-        lg:backdrop-blur rounded-lg"
+          className="px-[30px] py-6 max-w-[900px] mx-auto
+         flex flex-col lg:flex-col justify-between gap-4 lg:gap-x-3 
+         relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
+         lg:backdrop-blur rounded-lg"
           style={{ wordWrap: "break-word" }}
         >
-          <p className="text-[26px] self-center">
+          <p className="text-[16px] self-center">
             Response:
           </p>
-          <p className="text-[15px]">
+          <p className="text-[16px]">
             {JSON.stringify(responseData)}
           </p>
         </div>

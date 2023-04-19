@@ -35,28 +35,21 @@ function UserInput() {
     <div>
       <div
         className="px-[30px] py-6 max-w-[900px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
+    flex flex-col lg:flex-col  justify-between gap-4 lg:gap-x-3 
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
         <h1 className="text-[30px] items-center font-semibold">
           1. Submit PayForBlob Transactions
         </h1>
-      </div>
 
-      <div
-        className="px-[30px] py-6 max-w-[900px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
-    relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-    lg:backdrop-blur rounded-lg"
-      >
-        <h1
+        <h2
           className="text-[20px] items-center"
           style={{ wordWrap: "break-word" }}
         >
-          <p className="text-[20px] self-center">
-            Go to this{" "}
-            <span className="text-[25px] text-violet-700 font-semibold">
+          <p className="text-[16px] self-center">
+            Click this{" "}
+            <span className="text-[16px] text-violet-700 font-semibold">
               <a
                 href="https://go.dev/play/p/7ltvaj8lhRl"
                 target="_blank"
@@ -65,115 +58,108 @@ function UserInput() {
                 LINK
               </a>
             </span>{" "}
-            below to get your "namespace ID" and
-            "hex-encoded message" to fill this
-            blank OR use this example :
-            <span className=" text-violet-700 font-semibold">
-              "namespace ID"
-            </span>
-            ="590c14409888b5b0",
-            <span className=" text-violet-700 font-semibold">
-              "hex-encoded message"
-            </span>
-            :"7d51a817ee0755e3c7a76490c3"
+            to get your "namespace ID" and
+            "hex-encoded message" for filling this
+            blank or use this :
+            <div className="flex flex-col text-[16px]">
+              <span className="font-semibold">
+                "namespace ID" = "
+                <span className="text-violet-700">
+                  94d92e1ab531bfb7
+                </span>
+                ",
+              </span>
+              <span className="font-semibold">
+                "hex-encodedmessage" = "
+                <span className="text-violet-700">
+                  24a557cbf16cd1c9
+                </span>
+                "
+              </span>
+            </div>
           </p>
-        </h1>
-      </div>
+        </h2>
 
-      <div
-        className="px-[30px] py-6 max-w-[900px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
-    relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-    lg:backdrop-blur rounded-lg"
-      >
-        <p className="text-[20px] self-center">
-          Enter your namespace ID:
-        </p>
-        <input
-          type="text"
-          value={nameSpaceID}
-          onChange={handleNameSpaceIDChange}
-          className="border text-[26px] border-violet-700 self-center text-center"
-          style={{ width: "450px" }}
+        <div>
+          <div className="flex flex-col">
+            <p className="text-[16px] self-center">
+              NAMESPACE ID
+            </p>
+            <input
+              type="text"
+              value={nameSpaceID}
+              onChange={handleNameSpaceIDChange}
+              className="border text-[16px] border-violet-700 self-center text-center"
+              style={{ width: "300px" }}
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <p className="text-[16px] self-center">
+              HEX_ENCODED MESSAGE
+            </p>
+
+            <input
+              type="text"
+              value={data}
+              onChange={handleDataChange}
+              className="border text-[16px] border-violet-700 self-center text-center"
+              style={{ width: "300px" }}
+            />
+          </div>
+        </div>
+
+        <SendPFB
+          nameSpaceID={nameSpaceID}
+          data={data}
         />
       </div>
 
       <div
         className="px-[30px] py-6 max-w-[900px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
-    relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-    lg:backdrop-blur rounded-lg"
-      >
-        <p className="text-[20px] self-center">
-          Enter your hex-encoded message:
-        </p>
-
-        <input
-          type="text"
-          value={data}
-          onChange={handleDataChange}
-          className="border text-[26px] border-violet-700 self-center text-center"
-          style={{ width: "450px" }}
-        />
-      </div>
-      <SendPFB
-        nameSpaceID={nameSpaceID}
-        data={data}
-      />
-
-      <div
-        className="px-[30px] py-6 max-w-[900px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
-    relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-    lg:backdrop-blur rounded-lg"
+      flex flex-col lg:flex-col  justify-between gap-4 lg:gap-x-3 
+      relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
+      lg:backdrop-blur rounded-lg"
       >
         <h1 className="text-[30px] items-center font-semibold">
           2. Retrieve the data by block height and
           namespace
         </h1>
-      </div>
 
-      <div
-        className="px-[30px] py-6 max-w-[900px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
-    relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-    lg:backdrop-blur rounded-lg"
-      >
-        <p className="text-[20px] self-center">
-          Enter your namespace ID:
-        </p>
-        <input
-          type="text"
-          value={nameSpaceID2}
-          onChange={handleNameSpaceID2Change}
-          className="border text-[26px] border-violet-700 self-center text-center"
-          style={{ width: "450px" }}
+        <div>
+          <div className="flex flex-col">
+            <p className="text-[16px] self-center">
+              NAMESPACE ID
+            </p>
+            <input
+              type="text"
+              value={nameSpaceID2}
+              onChange={handleNameSpaceID2Change}
+              className="border text-[16px] border-violet-700 self-center text-center"
+              style={{ width: "300px" }}
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <p className="text-[16px] self-center">
+              HEIGHT
+            </p>
+
+            <input
+              type="text"
+              value={height}
+              onChange={handleHeightChange}
+              className="border text-[16px] border-violet-700 self-center text-center"
+              style={{ width: "300px" }}
+            />
+          </div>
+        </div>
+
+        <Retrieve
+          nameSpaceID2={nameSpaceID2}
+          height={height}
         />
       </div>
-
-      <div
-        className="px-[30px] py-6 max-w-[900px] mx-auto 
-    flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 
-    relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
-    lg:backdrop-blur rounded-lg"
-      >
-        <p className="text-[20px] self-center">
-          Enter your height:
-        </p>
-
-        <input
-          type="text"
-          value={height}
-          onChange={handleHeightChange}
-          className="border text-[26px] border-violet-700 self-center text-center"
-          style={{ width: "450px" }}
-        />
-      </div>
-
-      <Retrieve
-        nameSpaceID2={nameSpaceID2}
-        height={height}
-      />
     </div>
   );
 }
