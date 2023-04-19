@@ -66,7 +66,7 @@ function SendPFB(props) {
           style={{ wordWrap: "break-word" }}
         >
           <p className="text-[16px] self-center">
-            Response:
+            Response
           </p>
 
           <div className="self-center md:block">

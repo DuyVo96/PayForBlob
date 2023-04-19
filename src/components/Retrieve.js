@@ -48,7 +48,7 @@ function Retrieve(props) {
           style={{ wordWrap: "break-word" }}
         >
           <p className="text-[16px] self-center">
-            Response:
+            Response
           </p>
           <p className="text-[16px]">
             {JSON.stringify(responseData)}
