@@ -69,7 +69,7 @@ function SendPFB(props) {
             Response:
           </p>
 
-          <div className="self-center">
+          <div className="self-center md:block">
             <p className="text-[16px]">
               NAMESPACE ID:
               <span className=" text-violet-700 font-semibold">
