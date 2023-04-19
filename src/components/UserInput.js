@@ -67,7 +67,7 @@ function UserInput() {
                 <span className="text-violet-700">
                   94d92e1ab531bfb7
                 </span>
-                ",
+                "
               </span>
               <span className="font-semibold">
                 "hex-encodedmessage" = "
@@ -159,6 +159,24 @@ function UserInput() {
           nameSpaceID2={nameSpaceID2}
           height={height}
         />
+      </div>
+
+      <div
+        className="px-[30px] py-6 max-w-[900px] mx-auto 
+      flex flex-col lg:flex-col  justify-between gap-4 lg:gap-x-3 
+      relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
+      lg:backdrop-blur rounded-lg"
+      >
+        <div className="flex flex-col justify-center items-center">
+          <div>
+            Made by duyvo102#3738 with
+            &#10084;&#10084;&#10084;
+          </div>
+          <div>
+            Node Identity:
+            12D3KooWMTMwWoXW1HLWNNnS2wzGMYJ21hXLCgjS7TRFy1sYBvgo
+          </div>
+        </div>
       </div>
     </div>
   );
