@@ -39,7 +39,7 @@ function UserInput() {
     relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
     lg:backdrop-blur rounded-lg"
       >
-        <h1 className="text-[30px] items-center font-semibold">
+        <h1 className="text-[20px] items-center font-semibold">
           1. Submit PayForBlob Transactions
         </h1>
 
@@ -47,7 +47,7 @@ function UserInput() {
           className="text-[20px] items-center"
           style={{ wordWrap: "break-word" }}
         >
-          <p className="text-[16px] self-center">
+          <p className="text-[14px] self-center">
             Click this{" "}
             <span className="text-[16px] text-violet-700 font-semibold">
               <a
@@ -60,8 +60,8 @@ function UserInput() {
             </span>{" "}
             to get your "namespace ID" and
             "hex-encoded message" for filling this
-            blank or use this :
-            <div className="flex flex-col text-[16px]">
+            blank or use:
+            <div className="flex flex-col text-[14px]">
               <span className="font-semibold">
                 "namespace ID" = "
                 <span className="text-violet-700">
@@ -121,9 +121,8 @@ function UserInput() {
       relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
       lg:backdrop-blur rounded-lg"
       >
-        <h1 className="text-[30px] items-center font-semibold">
-          2. Retrieve the data by block height and
-          namespace
+        <h1 className="text-[20px] items-center font-semibold">
+          2. Retrieve the data namespace
         </h1>
 
         <div>

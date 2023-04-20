@@ -63,7 +63,10 @@ function SendPFB(props) {
         flex flex-col lg:flex-col justify-between gap-4 lg:gap-x-3 
         relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent 
         lg:backdrop-blur rounded-lg"
-          style={{ wordWrap: "break-word" }}
+          style={{
+            wordWrap: "break-word",
+            display: "block",
+          }}
         >
           <p className="text-[16px] self-center">
             Response
