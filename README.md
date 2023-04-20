@@ -6,7 +6,7 @@ I build a UI website for allowing users to submit PayForBlob Transactions from m
 
 https://pay-for-blob-three.vercel.app/
 
-## 2. Click this link to get your own amespace ID and hex-encoded message
+## 2. Click this link to get your own namespace ID and hex-encoded message
 
 ![image](https://user-images.githubusercontent.com/85976363/233256790-c93a76c5-a004-4aaf-9191-9b7f9d143e61.png)
 Enter your favorite number and lick ```Run``` to generate ```namespace ID``` and ```hex-encoded message```
