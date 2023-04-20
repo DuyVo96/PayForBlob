@@ -2,7 +2,7 @@
 
 I build a UI website for allowing users to submit PayForBlob Transactions from my light node. See the instruction below for more informations.
 
-## 1. Go to this website:
+## 1. Go to this website below
 
 https://pay-for-blob-three.vercel.app/
 
