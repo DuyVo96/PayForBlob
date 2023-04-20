@@ -68,10 +68,6 @@ function SendPFB(props) {
             display: "block",
           }}
         >
-          <p className="text-[16px] self-center">
-            Response
-          </p>
-
           <div className="self-center md:block">
             <p className="text-[16px]">
               NAMESPACE ID:

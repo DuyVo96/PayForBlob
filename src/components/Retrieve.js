@@ -47,9 +47,6 @@ function Retrieve(props) {
          lg:backdrop-blur rounded-lg"
           style={{ wordWrap: "break-word" }}
         >
-          <p className="text-[16px] self-center">
-            Response
-          </p>
           <p className="text-[16px]">
             {JSON.stringify(responseData)}
           </p>
