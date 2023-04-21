@@ -34,7 +34,7 @@ Use the ```namespace ID``` and ```height``` above to put in the Input tag on UI 
 
 
 ## NOTE
-Sometimes the node can not do the tx at the first time so try one more time if you don't see ```HEIGHT``` value.
+⛔️⛔️⛔️ Sometimes the node can not do the tx at the first time so try one more time if you don't see ```HEIGHT``` value ⛔️⛔️⛔️
 
 ### THANKS SO MUCH ❤❤❤
 ### Made by: duyvo102#3738
