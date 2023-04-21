@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SendPFB from "./SendPFB";
 import Retrieve from "./Retrieve";
+import SendPFB from "./SendPFB";
 
 function UserInput() {
   // sendtx

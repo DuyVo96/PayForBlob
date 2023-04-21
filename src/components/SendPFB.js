@@ -77,13 +77,23 @@ function SendPFB(props) {
               </span>
             </p>
 
-            <p className=" text-[16px]">
+            {/* <p className=" text-[16px]">
               HEIGHT:
               <span className=" text-violet-700 font-semibold">
                 {" "}
                 {response.height}
               </span>
-            </p>
+            </p> */}
+
+            {response.height && (
+              <p className=" text-[16px]">
+                HEIGHT:
+                <span className=" text-violet-700 font-semibold">
+                  {" "}
+                  {response.height}
+                </span>
+              </p>
+            )}
 
             <p className="text-[16px]">
               TXHASH:
@@ -106,11 +116,19 @@ function SendPFB(props) {
                 </a>
               </span>
             </p>
-          </div>
 
-          {/* <p className="text-[15px]">
-            {JSON.stringify(response)}
-          </p> */}
+            {!response.height && (
+              <p className=" text-[16px]">
+                ⛔️⛔️⛔️ Click Submit button
+                again to make sure get the HEIGHT
+                ⛔️⛔️⛔️
+                <span className=" text-violet-700 font-semibold">
+                  {" "}
+                  {response.height}
+                </span>
+              </p>
+            )}
+          </div>
         </div>
       )}
     </div>
