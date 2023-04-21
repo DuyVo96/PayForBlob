@@ -65,14 +65,14 @@ function UserInput() {
               <span className="font-semibold">
                 "namespace ID" = "
                 <span className="text-violet-700">
-                  94d92e1ab531bfb7
+                  2138d85e5429a081
                 </span>
                 "
               </span>
               <span className="font-semibold">
                 "hex-encodedmessage" = "
                 <span className="text-violet-700">
-                  24a557cbf16cd1c9
+                  7622644ea5f75b87b3340f9e2e589eecc7a5
                 </span>
                 "
               </span>
