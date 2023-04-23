@@ -69,63 +69,57 @@ function SendPFB(props) {
           }}
         >
           <div className="self-center md:block">
-            <p className="text-[16px]">
-              NAMESPACE ID:
-              <span className=" text-violet-700 font-semibold">
-                {" "}
-                {nameSpaceID}
-              </span>
-            </p>
-
-            {/* <p className=" text-[16px]">
-              HEIGHT:
-              <span className=" text-violet-700 font-semibold">
-                {" "}
-                {response.height}
-              </span>
-            </p> */}
-
             {response.height && (
-              <p className=" text-[16px]">
-                HEIGHT:
-                <span className=" text-violet-700 font-semibold">
-                  {" "}
-                  {response.height}
-                </span>
-              </p>
+              <>
+                <p className="text-[16px]">
+                  NAMESPACE ID:
+                  <span className=" text-violet-700 font-semibold">
+                    {" "}
+                    {nameSpaceID}
+                  </span>
+                </p>
+
+                <p className=" text-[16px]">
+                  HEIGHT:
+                  <span className=" text-violet-700 font-semibold">
+                    {" "}
+                    {response.height}
+                  </span>
+                </p>
+
+                <p className="text-[16px]">
+                  TXHASH:
+                  <span className=" text-violet-700 font-semibold">
+                    {" "}
+                    {response.txhash}
+                  </span>
+                </p>
+
+                <p className="text-[16px]">
+                  TX LINK:
+                  <span className="text-violet-700 font-semibold">
+                    {" "}
+                    <a
+                      href={`https://testnet.mintscan.io/celestia-incentivized-testnet/txs/${response.txhash}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      LINK
+                    </a>
+                  </span>
+                </p>
+              </>
             )}
 
-            <p className="text-[16px]">
-              TXHASH:
-              <span className=" text-violet-700 font-semibold">
-                {" "}
-                {response.txhash}
-              </span>
-            </p>
-
-            <p className="text-[16px]">
-              TX LINK:
-              <span className="text-violet-700 font-semibold">
-                {" "}
-                <a
-                  href={`https://testnet.mintscan.io/celestia-incentivized-testnet/txs/${response.txhash}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LINK
-                </a>
-              </span>
-            </p>
-
             {!response.height && (
-              <p className=" text-[16px]">
+              <p className="text-[16px]">
                 ⛔️⛔️⛔️ Click Submit button
-                again to make sure get the HEIGHT
-                ⛔️⛔️⛔️
-                <span className=" text-violet-700 font-semibold">
+                again to make sure the TX is
+                execute ⛔️⛔️⛔️
+                {/* <span className=" text-violet-700 font-semibold">
                   {" "}
                   {response.height}
-                </span>
+                </span> */}
               </p>
             )}
           </div>
